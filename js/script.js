@@ -16,8 +16,24 @@ if (navigator.serviceWorker) {
 }
 
 /**
- * This function displays an alert.
+ * This function does multiplication.
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  var numA = parseFloat(document.getElementById("variable1").value)
+  var numB = parseFloat(document.getElementById("variable2").value)
+  var product = 0
+  var counter = 0
+
+ while (counter < Math.abs(numB)) {
+    counter++
+    product = product + Math.abs(numA)
+  }
+
+  if ((numA < 0 && numB > 0) || (numB < 0 && numA > 0))
+    document.getElementById("product-of-variables").innerHTML =
+      "Both numbers multiply to -" + product + "."
+  else
+    document.getElementById("product-of-variables").innerHTML =
+      "Both numbers multiply to " + product + "."
 }
+

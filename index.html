@@ -28,14 +28,14 @@
     </noscript>
     <link
       rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
+      href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css"
       media="none"
       onload="if(media!='all')media='all'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
+        href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css"
       />
     </noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -54,60 +54,48 @@
       </header>
       <main class="mdl-layout__content">
         <p></p>
-        <h5>
-          This program will multiply the given variables, but the code ONLY uses
-          addiction and "While Loops".
-        </h5>
-        <div
-          class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-        >
-          <select class="mdl-textfield__input" id="variable1" name="variable1">
-            <option></option>
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="four">4</option>
-            <option value="five">5</option>
-            <option value="six">6</option>
-            <option value="seven">7</option>
-            <option value="eight">8</option>
-            <option value="nine">9</option>
-            <option value="ten">10</option>
-          </select>
-          <label class="mdl-textfield__label" for="variable1"
-            >Select Variable A</label
-          >
-        </div>
-        <div
-          class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-        >
-          <select class="mdl-textfield__input" id="variable2" name="variable2">
-            <option></option>
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="four">4</option>
-            <option value="five">5</option>
-            <option value="six">6</option>
-            <option value="seven">7</option>
-            <option value="eight">8</option>
-            <option value="nine">9</option>
-            <option value="ten">10</option>
-          </select>
-          <label class="mdl-textfield__label" for="variable1"
-            >Select Variable B</label
-          >
-        </div>
+        <h5>This program will multiply the given variables, but the code ONLY uses addiction and "While Loops".</h5>
+       <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="variable1"
+            />
+            <label class="mdl-textfield__label" for="variable1"
+              >Type In Variable A:</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <p></p>
+        <!-- Numeric Textfield -->
+        <form action="#">
+           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="variable2"
+            />
+            <label class="mdl-textfield__label" for="variable2"
+              >Type In Variable B:</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="myButtonClicked()"
         >
-          Say "Hello, World!"
+          Calculate
         </button>
         <!-- basic text -->
         <p></p>
-        <div id="hello-world"></div>
+        <div id="product-of-variables"></div>
       </main>
     </div>
   </body>
