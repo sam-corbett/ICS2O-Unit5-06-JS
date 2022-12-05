@@ -24,7 +24,7 @@ function myButtonClicked() {
   var product = 0
   var counter = 0
 
- while (counter < Math.abs(numB)) {
+  while (counter < Math.abs(numB)) {
     counter++
     product = product + Math.abs(numA)
   }
@@ -36,4 +36,3 @@ function myButtonClicked() {
     document.getElementById("product-of-variables").innerHTML =
       "Both numbers multiply to " + product + "."
 }
-
